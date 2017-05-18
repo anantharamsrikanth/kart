@@ -1,0 +1,76 @@
+
+ <!--   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous"> -->
+
+  
+<div class="container"  ng-controller="mycntrlr">
+
+  <div class="row">
+    <div class="col-md-12">
+      <div class="col-md-9">
+        <div class="row">
+          <div class="col-md-12 border">
+            <input type="text" placeholder="QUESTION" name="question">
+          </div>
+        </div>
+         <div class="row">
+      <div class="col-md-12 border">
+        <div class="row">
+       
+          <div class="col-md-10">
+            <input type="text" name="inputdata" placeholder="Add Option" ng-model="inputdata">
+          </div>
+          <div class="col-md-2">
+            <button type="button" class="btn btn-success"  ng-click="addoption()">Add Option</button>
+          </div>
+          
+        </div>
+        <div class="row">
+          <div class="col-md-12 mrgntop10" ng-repeat="data in mydata track by $index">
+            <div class="col-md-2">{{}}</div>
+            <div class="col-md-4">{{data}}</div>
+            <div class="col-md-6"><input type="button" ng-click="removedata(inputdata)" value="remove"></div>
+          </div>
+        </div>
+      </div>
+      </div>
+      <div class="row">
+      <div class="col-md-12 border">
+        <p>Select Option</p>
+        <div class="row">
+          <div class="col-md-12" ng-repeat="data in mydata track by $index">
+            <div class="col-md-2">{{}}</div>
+            <div class="col-md-4">{{data}}</div>
+            <div class="col-md-6"><input type="button" ng-click="removedata(inputdata)" value="remove"></div>
+          </div>
+        </div>
+          
+      </div>
+      </div>
+      <div class="row">
+      <div class="col-md-12 border">
+        <p>Explanation</p>
+       
+       <div class="row well" style="margin:auto;width:80%;">
+        
+ <textarea cols="60" id="editor1" name="editor1" rows="6" >short description paragraph.
+  </textarea>
+
+
+
+</div>
+      </div>
+      </div>
+      </div>
+      <div class="col-md-3">
+        <div class="row">
+          <div class="col-md-12">
+            <button type="button" class="btn btn-success width100">UPDATE</button>
+            <p>status:<b>Published</b></p>
+          </div>
+        </div>  
+      </div>
+    </div>
+  </div>
+</div>
+
+
